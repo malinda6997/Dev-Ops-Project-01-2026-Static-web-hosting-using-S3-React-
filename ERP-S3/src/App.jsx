@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar"; //this this error
 import Overview from "./pages/Overview";
 import Inventory from "./pages/Inventory";
 import Analytics from "./pages/Analytics";
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="flex min-h-screen">
         <Sidebar />
-        <main className="flex-1 p-4 md:p-8 ml-0 md:ml-64 transition-all duration-300">
+        <main className="flex-1 p-4 ml-0 transition-all duration-300 md:p-8 md:ml-64">
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/inventory" element={<Inventory />} />
