@@ -769,6 +769,46 @@ CI/CD pipeline automatically deploying to S3.
 
 ---
 
+## 📱 Application Screenshots
+
+### Dashboard Overview
+![Dashboard Overview](Readme%20Images/ui%20screen%201.png)
+Main dashboard with real-time business metrics and KPIs.
+
+### Analytics Module
+![Analytics Dashboard](Readme%20Images/ui%20screen%202.png)
+Comprehensive analytics with charts and performance metrics.
+
+### Customer Management
+![Customer Management](Readme%20Images/ui%20screen%203.png)
+Complete customer relationship and transaction management.
+
+### Human Resources Module
+![HR Management](Readme%20Images/ui%20screen%204.png)
+Employee profiles, team management, and HR analytics.
+
+### Inventory Management
+![Inventory System](Readme%20Images/ui%20screen%205.png)
+Real-time stock tracking and inventory analytics.
+
+### Order Management
+![Order Processing](Readme%20Images/ui%20screen%206.png)
+Order processing workflow and status tracking.
+
+### Supply Chain Module
+![Supply Chain](Readme%20Images/ui%20screen%207.png)
+End-to-end supply chain visibility and logistics tracking.
+
+### Settings & Configuration
+![Settings Page](Readme%20Images/ui%20screen%208.png)
+System configuration, user preferences, and access control.
+
+### Live Application on S3
+![S3 Hosted Application](Readme%20Images/ui%20screen%201%20using%20s3%20bucket%20link.png)
+Application running live on AWS S3 with CloudFront CDN.
+
+---
+
 ## ☁️ AWS S3 Bucket Configuration
 
 ### S3 Bucket Setup Details

@@ -95,31 +95,31 @@ This is the **Frontend Application** for the ERP system - a comprehensive, moder
 ## 📸 Application Screenshots
 
 ### Dashboard Overview
-![Dashboard Overview](../../Readme%20Images/ui%20screen%201.png)
+![Dashboard Overview](../Readme%20Images/ui%20screen%201.png)
 
 ### Analytics Dashboard
-![Analytics Module](../../Readme%20Images/ui%20screen%202.png)
+![Analytics Module](../Readme%20Images/ui%20screen%202.png)
 
 ### Customer Management
-![Customer Management](../../Readme%20Images/ui%20screen%203.png)
+![Customer Management](../Readme%20Images/ui%20screen%203.png)
 
 ### Human Resources Module
-![HR Management](../../Readme%20Images/ui%20screen%204.png)
+![HR Management](../Readme%20Images/ui%20screen%204.png)
 
 ### Inventory Management
-![Inventory System](../../Readme%20Images/ui%20screen%205.png)
+![Inventory System](../Readme%20Images/ui%20screen%205.png)
 
 ### Order Management
-![Order Processing](../../Readme%20Images/ui%20screen%206.png)
+![Order Processing](../Readme%20Images/ui%20screen%206.png)
 
 ### Supply Chain Module
-![Supply Chain](../../Readme%20Images/ui%20screen%207.png)
+![Supply Chain](../Readme%20Images/ui%20screen%207.png)
 
 ### Settings & Configuration
-![Settings Page](../../Readme%20Images/ui%20screen%208.png)
+![Settings Page](../Readme%20Images/ui%20screen%208.png)
 
 ### Live Application on S3
-![S3 Hosted Application](../../Readme%20Images/ui%20screen%201%20using%20s3%20bucket%20link.png)
+![S3 Hosted Application](../Readme%20Images/ui%20screen%201%20using%20s3%20bucket%20link.png)
 
 ---
 
