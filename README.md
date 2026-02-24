@@ -6,7 +6,7 @@
 
 **A Simple, Modern, Open-Source Vite + React ERP System**
 
-![Dashboard Preview](Readme%20Images/ui%20screen%201.png)
+![Dashboard Preview](./Readme%20Images/ui%20screen%201.png)
 
 ![Deployment Status](https://img.shields.io/badge/Status-Production-green)
 ![Build](https://img.shields.io/badge/Build-Vite-blue)
@@ -633,23 +633,28 @@ jobs:
 ## 📸 Deployment Screenshots
 
 ### AWS S3 Bucket View
-![S3 Bucket](Readme%20Images/aws%20console%20s3%20bucket%20view.png)
+![S3 Bucket](./Readme%20Images/aws%20console%20s3%20bucket%20view.png)
+
 Shows the S3 bucket containing all deployed application files.
 
 ### Terraform Init Success
-![Terraform Init](Readme%20Images/Teraform%20init%20success%20page.png)
+![Terraform Init](./Readme%20Images/Terraform%20init%20success%20page.png)
+
 Initial Terraform setup with AWS provider.
 
 ### Terraform Plan Success
-![Terraform Plan](Readme%20Images/Teraform%20plan%20success%20page.png)
+![Terraform Plan](./Readme%20Images/Teraform%20plan%20success%20page.png)
+
 Planning AWS resources before creation.
 
 ### Terraform Apply Success
-![Terraform Apply](Readme%20Images/Terraform%20apply%20success%20page.png)
+![Terraform Apply](./Readme%20Images/Terraform%20apply%20success%20page.png)
+
 Successfully created all AWS infrastructure.
 
 ### GitHub Actions Deploy
-![GitHub Actions](Readme%20Images/git%20hub%20action%20deploy%20success.png)
+![GitHub Actions](./Readme%20Images/git%20hub%20action%20deploy%20success.png)
+
 CI/CD pipeline automatically deploying to S3.
 
 ---
@@ -657,39 +662,48 @@ CI/CD pipeline automatically deploying to S3.
 ## 📱 Application Screenshots
 
 ### Dashboard Overview
-![Dashboard Overview](Readme%20Images/ui%20screen%201.png)
+![Dashboard Overview](./Readme%20Images/ui%20screen%201.png)
+
 Main dashboard with real-time business metrics and KPIs.
 
 ### Analytics Module
-![Analytics Dashboard](Readme%20Images/ui%20screen%202.png)
+![Analytics Dashboard](./Readme%20Images/ui%20screen%202.png)
+
 Comprehensive analytics with charts and performance metrics.
 
 ### Customer Management
-![Customer Management](Readme%20Images/ui%20screen%203.png)
+![Customer Management](./Readme%20Images/ui%20screen%203.png)
+
 Complete customer relationship and transaction management.
 
 ### Human Resources Module
-![HR Management](Readme%20Images/ui%20screen%204.png)
+![HR Management](./Readme%20Images/ui%20screen%204.png)
+
 Employee profiles, team management, and HR analytics.
 
 ### Inventory Management
-![Inventory System](Readme%20Images/ui%20screen%205.png)
+![Inventory System](./Readme%20Images/ui%20screen%205.png)
+
 Real-time stock tracking and inventory analytics.
 
 ### Order Management
-![Order Processing](Readme%20Images/ui%20screen%206.png)
+![Order Processing](./Readme%20Images/ui%20screen%206.png)
+
 Order processing workflow and status tracking.
 
 ### Supply Chain Module
-![Supply Chain](Readme%20Images/ui%20screen%207.png)
+![Supply Chain](./Readme%20Images/ui%20screen%207.png)
+
 End-to-end supply chain visibility and logistics tracking.
 
 ### Settings & Configuration
-![Settings Page](Readme%20Images/ui%20screen%208.png)
+![Settings Page](./Readme%20Images/ui%20screen%208.png)
+
 System configuration, user preferences, and access control.
 
 ### Live Application on S3
-![S3 Hosted Application](Readme%20Images/ui%20screen%201%20using%20s3%20bucket%20link.png)
+![S3 Hosted Application](./Readme%20Images/ui%20screen%201%20using%20s3%20bucket%20link.png)
+
 Application running live on AWS S3 with CloudFront CDN.
 
 ---
