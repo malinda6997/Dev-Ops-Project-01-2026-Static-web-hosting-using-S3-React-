@@ -4,12 +4,15 @@
 
 **Enterprise Resource Planning Dashboard**
 
-A Modern, Automated, Cloud-Native Frontend Application
+**A Simple, Modern, Open-Source Vite + React ERP System**
+
+![Dashboard Preview](Readme%20Images/ui%20screen%201.png)
 
 ![Deployment Status](https://img.shields.io/badge/Status-Production-green)
 ![Build](https://img.shields.io/badge/Build-Vite-blue)
 ![Deployment](https://img.shields.io/badge/Deployment-AWS%20S3-orange)
 ![Infrastructure](https://img.shields.io/badge/Infrastructure-Terraform-purple)
+![License](https://img.shields.io/badge/License-Open%20Source-brightgreen)
 
 </div>
 
@@ -37,16 +40,18 @@ A Modern, Automated, Cloud-Native Frontend Application
 
 ## 🎯 Project Overview
 
-**ERP Front-End for S3** is a professional, production-ready **Vite + React** frontend application for an Enterprise Resource Planning system. The project is fully automated with:
+**ERP Front-End for S3** is a **simple, modern, open-source Enterprise Resource Planning (ERP) dashboard** built with **Vite + React**. The project is fully automated with:
 
-✅ **Modern Build Tool** - Vite for blazing-fast development and optimized builds  
+✅ **Simple & Modern** - Clean, minimal Vite + React application  
+✅ **Complete ERP System** - 7+ modules for business management  
 ✅ **Cloud-Native Hosting** - AWS S3 static website hosting  
 ✅ **Infrastructure as Code** - Terraform for reproducible infrastructure  
-✅ **Automated CI/CD** - GitHub Actions for fully automated deployment pipelines  
+✅ **Automated CI/CD** - GitHub Actions for fully automated deployments  
 ✅ **Professional UI/UX** - Tailwind CSS + React components  
-✅ **Production Ready** - Optimized builds, ESLint validation, and security best practices  
+✅ **Open Source** - Free to use, learn, and modify  
+✅ **Production Ready** - Optimized builds, ESLint validation, best practices  
 
-This project demonstrates enterprise-level DevOps practices with complete automation from code commit to S3 deployment.
+This project demonstrates a **complete modern development workflow** - from coding to cloud deployment - suitable for learning and production use!
 
 ---
 
@@ -213,17 +218,7 @@ ERP Front-End for S3/
 │   └── 📁 workflows/
 │       └── 📄 deploy.yml             # CI/CD pipeline definition
 │
-├── 📁 Readme Images/                  # Documentation screenshots
-│   ├── ui screen 1.png
-│   ├── ui screen 2.png
-│   ├── ... (more UI screenshots)
-│   ├── aws console s3 bucket view.png
-│   ├── github action deploy success.png
-│   ├── Terraform init success page.png
-│   ├── Terraform plan success page.png
-│   └── Terraform apply success page.png
-│
-├── 📄 README.md                       # This file (Main documentation)
+├── � README.md                       # Main documentation
 └── 📄 .gitignore                      # Git ignore rules
 
 ```
@@ -393,128 +388,18 @@ Terraform manages all AWS infrastructure needed for hosting this application. Ev
 
 ### Terraform Files
 
-#### 📄 `provider.tf`
-Configures AWS provider settings:
+**Infrastructure Components:**
+- 📄 **provider.tf** - AWS provider configuration and setup
+- 📄 **main.tf** - Main AWS resources (S3, CloudFront, policies)
+- 📄 **outputs.tf** - Output values for deployed resources
 
-```hcl
-terraform {
-  required_version = ">= 1.0"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = var.aws_region
-}
-```
-
-**Key Configuration:**
-- AWS Provider version
-- AWS Region (default: us-east-1)
-- Terraform state management
-
-#### 📄 `main.tf`
-Defines AWS resources:
-
-```hcl
-# S3 Bucket for hosting
-resource "aws_s3_bucket" "website" {
-  bucket = var.bucket_name
-}
-
-# S3 Static Website Hosting Configuration
-resource "aws_s3_bucket_website_configuration" "website" {
-  bucket = aws_s3_bucket.website.id
-  
-  index_document {
-    suffix = "index.html"
-  }
-  
-  error_document {
-    key = "index.html"
-  }
-}
-
-# S3 Bucket Public Access Block
-resource "aws_s3_bucket_public_access_block" "website" {
-  bucket = aws_s3_bucket.website.id
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
-}
-
-# S3 Bucket Policy for public read access
-resource "aws_s3_bucket_policy" "website_policy" {
-  bucket = aws_s3_bucket.website.id
-  
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Principal = "*"
-        Action = "s3:GetObject"
-        Resource = "${aws_s3_bucket.website.arn}/*"
-      }
-    ]
-  })
-}
-
-# CloudFront Distribution (Optional - for CDN)
-resource "aws_cloudfront_distribution" "website_distribution" {
-  enabled = true
-  
-  origin {
-    domain_name = aws_s3_bucket_website_configuration.website.website_endpoint
-    origin_id   = "myS3Origin"
-  }
-  
-  # Cache behavior, HTTPS, etc.
-  ...
-}
-```
-
-**Resources Created:**
-- ✅ S3 Bucket
-- ✅ Static Website Hosting Configuration
-- ✅ Public Access Policy
+**Resources Managed by Terraform:**
+- ✅ S3 Bucket for static website hosting
+- ✅ S3 Static Website Configuration
+- ✅ S3 Bucket Public Access Policy
 - ✅ CloudFront Distribution (CDN)
-- ✅ HTTPS/TLS Certificates (via CloudFront)
-
-#### 📄 `outputs.tf`
-Exports important values:
-
-```hcl
-output "s3_bucket_name" {
-  value = aws_s3_bucket.website.id
-  description = "Name of the S3 bucket"
-}
-
-output "s3_website_endpoint" {
-  value = aws_s3_bucket_website_configuration.website.website_endpoint
-  description = "S3 static website endpoint"
-}
-
-output "cloudfront_domain_name" {
-  value = aws_cloudfront_distribution.website_distribution.domain_name
-  description = "CloudFront distribution domain"
-}
-
-output "cloudfront_distribution_id" {
-  value = aws_cloudfront_distribution.website_distribution.id
-  description = "CloudFront distribution ID"
-}
-```
-
-**Useful for:**
-- Getting S3 bucket name for CI/CD
-- CloudFront Distribution ID for cache invalidation
-- Website endpoint URL
+- ✅ HTTPS/TLS Certificates
+- ✅ Cache behaviors and optimization
 
 ### Terraform Workflow
 
@@ -986,7 +871,66 @@ terraform refresh
 
 ---
 
-## 🤝 Contributing
+## 🎓 What I Learned Building This Project
+
+This project was an incredible learning experience that covered full-stack DevOps and modern web development:
+
+### 🔧 Frontend Development
+- ✅ **React 19** - Modern hooks, component composition, and state management
+- ✅ **Vite** - Lightning-fast build tool with HMR (Hot Module Replacement)
+- ✅ **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- ✅ **React Router** - Client-side routing for single-page applications
+- ✅ **Data Visualization** - Creating charts and dashboards with Recharts
+
+### ☁️ Cloud Infrastructure & DevOps
+- ✅ **AWS S3** - Static website hosting and bucket configuration
+- ✅ **CloudFront** - CDN setup for global content delivery
+- ✅ **Terraform** - Infrastructure as Code (IaC) for reproducible deployments
+- ✅ **AWS IAM** - Identity and access management for security
+
+### 🔄 CI/CD & Automation
+- ✅ **GitHub Actions** - Automated build and deployment pipelines
+- ✅ **Workflow Automation** - Trigger deployments on code commits
+- ✅ **Build Optimization** - Automated ESLint checks and production builds
+- ✅ **Cache Invalidation** - CloudFront cache management in CI/CD
+
+### 📦 Development Best Practices
+- ✅ **Code Quality** - ESLint configuration and validation
+- ✅ **State Management** - Terraform state versioning and backup
+- ✅ **Security** - AWS credentials handling, GitHub Secrets
+- ✅ **Documentation** - Professional README with architecture diagrams
+
+### 💡 Key Takeaways
+1. **End-to-End Automation** - From code commit to live production in minutes
+2. **Infrastructure as Code** - Managing infrastructure like software with version control
+3. **Best Practices** - Security, performance optimization, and scalability
+4. **Cloud-Native Development** - Building applications designed for cloud deployment
+
+This project successfully demonstrates the modern development workflow that enterprises use for production applications! 🚀
+
+---
+
+## 📞 Contact & Support
+
+### Developer Contact
+- 📧 **Email:** malindaprabath876@gmail.com
+- 📱 **Phone:** 0762206157
+
+### Getting Help
+- 📖 Check the [ERP-S3 Application README](ERP-S3/README.md) for app-specific docs
+- 🔍 Search existing GitHub issues
+- 💬 Open a new issue with details
+- 📧 Contact via email for support
+
+### Report an Issue
+When reporting issues, include:
+- Description of the problem
+- Steps to reproduce
+- Expected vs actual behavior
+- Your system information (OS, Node version, etc.)
+- Error messages or logs
+
+---
 
 We welcome contributions! Please follow these steps:
 
@@ -1023,27 +967,19 @@ git push origin feature/your-feature-name
 
 ---
 
-## 📞 Support & Contact
+##  License
 
-### Getting Help
-- 📖 Check the [ERP-S3 Application README](ERP-S3/README.md) for app-specific docs
-- 🔍 Search existing GitHub issues
-- 💬 Open a new issue with details
-- 📧 Contact development team
+This project is **Open Source** and available for learning, modification, and distribution.
 
-### Report an Issue
-When reporting issues, include:
-- Description of the problem
-- Steps to reproduce
-- Expected vs actual behavior
-- Your system information (OS, Node version, etc.)
-- Error messages or logs
+**You are free to:**
+- ✅ Use this project for learning and educational purposes
+- ✅ Fork and modify the code
+- ✅ Deploy your own version
+- ✅ Contribute improvements
+- ✅ Share with others
 
----
-
-## 📄 License
-
-This project is proprietary and confidential. Unauthorized copying, distribution, or modification is prohibited.
+**Attribution:**
+Please give credit to the original creator: **Malinda Prabath** (malindaprabath876@gmail.com)
 
 ---
 
