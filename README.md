@@ -1,115 +1,205 @@
-# 🚀 ERP Front-End for S3
+# ERP Front-End for AWS S3
 
 <div align="center">
 
-**Enterprise Resource Planning Dashboard**
+![ERP Dashboard Banner](./Readme%20Images/readme-banner3.png)
 
-**A Simple, Modern, Open-Source Vite + React ERP System**
+</div>
 
-![Dashboard Preview](./Readme%20Images/ui%20screen%201.png)
+<div align="center">
 
-![Deployment Status](https://img.shields.io/badge/Status-Production-green)
-![Build](https://img.shields.io/badge/Build-Vite-blue)
-![Deployment](https://img.shields.io/badge/Deployment-AWS%20S3-orange)
-![Infrastructure](https://img.shields.io/badge/Infrastructure-Terraform-purple)
-![License](https://img.shields.io/badge/License-Open%20Source-brightgreen)
+## Enterprise Resource Planning Dashboard 🚀
+
+**A Production-Ready, Modern, Open-Source ERP System**  
+**Built with Vite + React | Deployed on AWS S3 | Automated with Terraform & GitHub Actions**
+
+![Deployment Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=flat-square)
+![Build Tool](https://img.shields.io/badge/Build-Vite%207.3.1-646CFF?style=flat-square&logo=vite)
+![Frontend](https://img.shields.io/badge/Frontend-React%2019.2-61DAFB?style=flat-square&logo=react)
+![Styling](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?style=flat-square&logo=tailwindcss)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-AWS%20S3%20%2B%20Terraform-FF9900?style=flat-square&logo=amazon)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088FF?style=flat-square&logo=github)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 </div>
 
 ---
 
+---
+
 ## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
+- [Overview](#overview)
 - [Key Features](#key-features)
 - [Technology Stack](#technology-stack)
 - [Project Architecture](#project-architecture)
 - [File Structure](#file-structure)
-- [Setup & Installation](#setup--installation)
-- [Development Guide](#development-guide)
-- [Building for Production](#building-for-production)
-- [Infrastructure with Terraform](#infrastructure-with-terraform)
-- [CI/CD Pipeline - GitHub Actions](#cicd-pipeline---github-actions)
-- [Deployment Screenshots](#deployment-screenshots)
-- [AWS S3 Bucket Configuration](#aws-s3-bucket-configuration)
+- [Quick Start](#quick-start)
+- [Development Setup](#development-setup)
+- [Building & Deployment](#building--deployment)
+- [Infrastructure as Code](#infrastructure-as-code)
+- [CI/CD Pipeline](#cicd-pipeline)
+- [AWS S3 Configuration](#aws-s3-configuration)
+- [Module Overview](#module-overview)
+- [Best Practices](#best-practices)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
-- [Support](#support)
+- [Support & License](#support--license)
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Overview
 
-**ERP Front-End for S3** is a **simple, modern, open-source Enterprise Resource Planning (ERP) dashboard** built with **Vite + React**. The project is fully automated with:
+**ERP Front-End for AWS S3** is a **comprehensive, production-grade Enterprise Resource Planning (ERP) dashboard** designed to demonstrate modern web development practices combined with cloud infrastructure automation. 
 
-✅ **Simple & Modern** - Clean, minimal Vite + React application  
-✅ **Complete ERP System** - 7+ modules for business management  
-✅ **Cloud-Native Hosting** - AWS S3 static website hosting  
-✅ **Infrastructure as Code** - Terraform for reproducible infrastructure  
-✅ **Automated CI/CD** - GitHub Actions for fully automated deployments  
-✅ **Professional UI/UX** - Tailwind CSS + React components  
-✅ **Open Source** - Free to use, learn, and modify  
-✅ **Production Ready** - Optimized builds, ESLint validation, best practices  
+This project serves as both a **fully functional ERP system** and an **educational reference** for:
+- Scalable React application architecture
+- Cloud-native deployment strategies  
+- Infrastructure automation with Terraform
+- Continuous Integration & Continuous Deployment (CI/CD)
+- Professional UI/UX development with Tailwind CSS
 
-This project demonstrates a **complete modern development workflow** - from coding to cloud deployment - suitable for learning and production use!
+### Key Highlights
+
+✨ **Production-Grade Application** - Ship-ready code with ESLint validation  
+🚀 **Modern Tech Stack** - Latest versions of React, Vite, and tooling  
+☁️ **Cloud Ready** - AWS S3 static hosting with CloudFront integration  
+🏗️ **Infrastructure as Code** - Reproducible infrastructure with Terraform  
+⚙️ **Fully Automated** - GitHub Actions CI/CD pipeline included  
+📦 **Optimized Builds** - Code splitting, tree-shaking, and minification  
+🎨 **Professional UI** - Tailwind CSS + Recharts for modern dashboards  
+📚 **Well Documented** - Comprehensive guides and code comments  
 
 ---
 
 ## ✨ Key Features
 
 ### 📊 **Comprehensive ERP Dashboard**
-- 7+ built-in modules for business management
-- Real-time analytics and metrics
-- Multiple data visualization options
+- **7+ Business Modules** - Complete coverage of enterprise operations
+- **Real-Time Analytics** - Interactive dashboards with live metrics
+- **Multiple Data Visualizations** - Charts, graphs, and statistical displays
+- **Responsive Design** - Works seamlessly across all devices
+- **Quick Navigation** - Intuitive sidebar for module access
 
-### 🔄 **Automated Deployment Pipeline**
-- Trigger deployment on every commit
-- Automatic ESLint code quality checks
-- Production-optimized builds
-- Direct S3 bucket uploads
-- CloudFront cache invalidation
+### 📦 **Available ERP Modules**
+| Module | Purpose |
+|--------|---------|
+| **Overview** | Executive dashboard & KPI metrics |
+| **Orders** | Order management & tracking |
+| **Inventory** | Stock management & warehouse operations |
+| **Customers** | Customer relationship management |
+| **HR** | Human resources & payroll |
+| **Supply Chain** | Supplier & logistics management |
+| **Analytics** | Advanced reporting & insights |
+| **Settings** | System configuration & preferences |
+
+### 🔄 **Automated Deployment**
+- ✅ Trigger builds on every commit
+- ✅ Automatic code quality checks (ESLint)
+- ✅ Production-optimized bundle creation
+- ✅ Direct S3 bucket deployment
+- ✅ CloudFront cache invalidation
+- ✅ Email notifications on pipeline completion
 
 ### ☁️ **Cloud Infrastructure**
-- AWS S3 for reliable hosting
-- Terraform for Infrastructure as Code
-- Scalable and maintainable setup
-- Cost-effective deployment
+- **AWS S3** - Highly available static website hosting
+- **CloudFront** - Global CDN for fast content delivery
+- **Terraform** - Infrastructure as Code for consistency
+- **Cost Efficient** - Minimal expenses with pay-per-use AWS pricing
+- **Scalable** - Easily handle traffic spikes
 
-### 🔧 **Developer-Friendly**
-- Fast Hot Module Replacement (HMR) with Vite
-- Modern React with hooks
-- Tailwind CSS for rapid UI development
-- Comprehensive documentation
+### 🛡️ **Enterprise Features**
+- Comprehensive error handling
+- Input validation & security
+- Responsive mobile-first design
+- Dark mode support capability
+- Accessibility compliance
 
 ---
 
-## 🛠️ Technology Stack
+## � Module Overview
+
+Each ERP module provides distinct business functionality:
+
+### 1. **Overview Dashboard** 📈
+- Executive dashboard with KPI metrics
+- Real-time business analytics
+- Key performance indicators
+- Visual data presentations
+
+### 2. **Orders Management** 📦
+- Order processing workflows
+- Order status tracking
+- Fulfillment management
+- Sales documentation
+
+### 3. **Inventory Management** 📦
+- Stock level tracking
+- Warehouse management
+- Product catalog
+- Inventory analytics
+
+### 4. **Customers** 👥
+- Customer profiles
+- Contact information
+- Transaction history
+- Customer analytics
+
+### 5. **Human Resources** 👔
+- Employee management
+- Team organization
+- HR analytics
+- Performance tracking
+
+### 6. **Supply Chain** 🚚
+- Supplier management
+- Logistics tracking
+- Distribution network
+- Supply chain visibility
+
+### 7. **Analytics** 📊
+- Advanced reporting
+- Custom dashboards
+- Data insights
+- Trend analysis
+
+### 8. **Settings** ⚙️
+- System configuration
+- User preferences
+- Access control
+- Application settings
+
+---
 
 ### Frontend Technologies
 | Technology | Version | Purpose |
 |-----------|---------|---------|
-| **React** | 19.2.0 | UI framework |
-| **Vite** | 7.3.1 | Build tool & dev server |
-| **React Router** | 7.13.0 | Client-side routing |
-| **Tailwind CSS** | 3.4.1 | Styling framework |
-| **Recharts** | 3.7.0 | Data visualization |
-| **Lucide React** | 0.575.0 | Icon library |
-| **ESLint** | 9.39.1 | Code quality |
+| **React** | 19.2.0 | Modern UI library with hooks |
+| **Vite** | 7.3.1 | Lightning-fast build tool & dev server |
+| **React Router** | 7.13.0 | Client-side routing & navigation |
+| **Tailwind CSS** | 3.4.1 | Utility-first CSS framework |
+| **Tailwind Forms** | 4.2.0 | Pre-styled form components |
+| **Recharts** | 3.7.0 | React charting library |
+| **Lucide React** | 0.575.0 | Beautiful SVG icon library |
+| **PostCSS** | 8.4.35 | CSS transformation tool |
+| **Autoprefixer** | 10.4.18 | Vendor prefixing utility |
+
+### Development & Quality Tools
+| Tool | Version | Purpose |
+|-----|---------|---------|
+| **ESLint** | 9.39.1 | Code quality & style enforcement |
+| **@vitejs/plugin-react** | 5.1.1 | React integration for Vite |
+| **eslint-plugin-react-hooks** | 7.0.1 | React Hooks linting rules |
+| **eslint-plugin-react-refresh** | 0.4.24 | React Refresh validation |
 
 ### DevOps & Infrastructure
-| Tool | Purpose |
-|------|---------|
-| **Terraform** | Infrastructure as Code |
-| **GitHub Actions** | CI/CD automation |
-| **AWS S3** | Static hosting |
-| **AWS CloudFront** | CDN & caching |
-
-### Build Tools
-| Tool | Purpose |
-|------|---------|
-| **Node.js & npm** | Package management |
-| **PostCSS** | CSS processing |
-| **Autoprefixer** | Browser compatibility |
+| Tool | Purpose | Status |
+|------|---------|--------|
+| **Terraform** | Infrastructure as Code (IaC) | Configured ✅ |
+| **AWS S3** | Static website hosting | Deployed ✅ |
+| **AWS CloudFront** | Content delivery network | Configured ✅ |
+| **GitHub Actions** | CI/CD automation | Configured ✅ |
+| **Git** | Version control | Integrated ✅ |
 
 ---
 
@@ -117,59 +207,33 @@ This project demonstrates a **complete modern development workflow** - from codi
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│           Developer Workflow (Local Machine)             │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  1. Clone Repository → 2. Install Dependencies          │
-│  3. Run Development Server (npm run dev)                 │
-│  4. Make Changes → 5. Commit & Push to GitHub            │
-│                                                          │
+│         Client Browser / CDN                            │
+│         (Served via CloudFront)                         │
+└────────────────────┬────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────┐
+│         AWS S3 Bucket                                   │
+│    (Static Website Hosting)                             │
+│  - index.html, CSS, JS, Assets                          │
+└────────────────────┬────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────┐
+│         GitHub Repository                               │
+│    - Source Code                                        │
+│    - Terraform Configuration                            │
+│    - CI/CD Pipeline (Actions)                           │
 └─────────────────────────────────────────────────────────┘
-                           ↓
-                    GitHub Repository
-                    (Version Control)
-                           ↓
-┌─────────────────────────────────────────────────────────┐
-│         GitHub Actions CI/CD Pipeline (Automated)        │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  1. Trigger on: Push to main branch                      │
-│  2. Build Job:                                           │
-│     ├─ Checkout code                                     │
-│     ├─ Setup Node.js environment                         │
-│     ├─ Install dependencies (npm install)                │
-│     ├─ Run ESLint checks                                 │
-│     ├─ Build optimized bundle (npm run build)            │
-│     └─ Upload to S3 (dist/ folder)                       │
-│  3. CloudFront:                                          │
-│     └─ Invalidate cache (clear CDN)                      │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
-                           ↓
-┌─────────────────────────────────────────────────────────┐
-│              AWS Cloud Infrastructure                    │
-├─────────────────────────────────────────────────────────┤
-│                                                          │
-│  ┌──────────────────────────────────────────────┐       │
-│  │  S3 Bucket (Static Website Hosting)          │       │
-│  │  - Stores dist/ folder contents              │       │
-│  │  - Serves HTML, CSS, JS files                │       │
-│  └──────────────────────────────────────────────┘       │
-│                      ↓                                   │
-│  ┌──────────────────────────────────────────────┐       │
-│  │  CloudFront CDN                              │       │
-│  │  - Global content delivery                   │       │
-│  │  - Edge caching                              │       │
-│  │  - HTTPS & security                          │       │
-│  └──────────────────────────────────────────────┘       │
-│                      ↓                                   │
-│  Public URL: https://your-bucket.s3.amazonaws.com       │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
-                           ↓
-                    End Users
-              (Access ERP Application)
 ```
+
+### Data Flow
+
+1. **Development** → Code is developed locally with hot module replacement
+2. **Version Control** → Commits to GitHub trigger GitHub Actions
+3. **Build** → Vite builds optimized production bundle
+4. **Quality Check** → ESLint validates code quality
+5. **Deployment** → Bundle uploaded to AWS S3
+6. **CDN** → CloudFront caches content globally
+7. **Delivery** → Users access via CloudFront URL
 
 ---
 
@@ -225,121 +289,122 @@ ERP Front-End for S3/
 
 ---
 
-## 🚀 Setup & Installation
+## 🚀 Quick Start
+
+Get the application running in 5 minutes:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/yourusername/ERP-Frontend-S3.git
+cd "ERP Front-End for S3"
+
+# 2. Install dependencies
+cd ERP-S3
+npm install
+
+# 3. Start development server
+npm run dev
+
+# 4. Open in browser
+# Navigate to http://localhost:5173
+```
+
+---
+
+## 📦 Development Setup
 
 ### Prerequisites
 
-Before starting, ensure you have the following installed:
+Before you begin, ensure you have:
 
-```bash
-# Required
-- Node.js v18.0.0 or higher
-- npm v9.0.0 or higher
-- Git
+| Requirement | Version | Purpose |
+|------------|---------|---------|
+| **Node.js** | 18.0.0+ | JavaScript runtime |
+| **npm** | 9.0.0+ | Package manager |
+| **Git** | Latest | Version control |
+| **VS Code** | Latest | Recommended editor |
 
-# For Infrastructure (Terraform)
-- Terraform v1.0.0 or higher
-- AWS CLI v2.0.0 or higher
-- AWS Account with appropriate permissions
+### Installation Steps
 
-# Optional
-- VS Code (recommended editor)
-- GitHub Desktop or Git GUI
-```
-
-### Step-by-Step Setup
-
-#### 1️⃣ Clone the Repository
-
+**Step 1: Clone the Repository**
 ```bash
 git clone https://github.com/yourusername/ERP-Frontend-S3.git
 cd "ERP Front-End for S3"
-```
-
-#### 2️⃣ Navigate to Application Directory
-
-```bash
 cd ERP-S3
 ```
 
-#### 3️⃣ Install Dependencies
-
+**Step 2: Install Dependencies**
 ```bash
 npm install
 ```
 
 This installs all required packages:
-- React & React-DOM
-- Vite
-- Tailwind CSS
-- Routing, charts, icons, etc.
+- React 19.2.0 & React-DOM
+- Vite 7.3.1
+- Tailwind CSS 3.4.1
+- React Router, Recharts, Lucide icons
+- Development tools (ESLint, etc.)
 
-#### 4️⃣ Verify Installation
-
-Check Node modules are installed:
+**Step 3: Verify Installation**
 ```bash
-ls node_modules/
+npm list react vite
 ```
 
-Should show multiple package folders.
+Both should show their installed versions.
 
----
+### Running Development Server
 
-## 💻 Development Guide
+```bash
+npm run dev
+### Running Development Server
 
-### Running the Development Server
+Start the development server with instant hot reload:
 
 ```bash
 npm run dev
 ```
 
-This command:
-- Starts Vite development server
-- Enables Hot Module Replacement (HMR) for instant updates
-- Opens at `http://localhost:5173` by default
-- No need to refresh browser after code changes
+**What happens:**
+- Vite dev server starts at `http://localhost:5173`
+- Hot Module Replacement enabled (instant updates on save)
+- Press `q` to quit the server
+- Check console for errors
 
 ### Development Workflow
 
-1. **Make code changes** in any file
-2. **See changes instantly** in browser (HMR)
-3. **Check console** for any errors
-4. **Run ESLint** to validate code quality
+1. **Edit Code** → Make changes in src/ folder
+2. **Instant Update** → Browser auto-refreshes (HMR)
+3. **View Changes** → See results immediately
+4. **No Rebuild** → Fast feedback loop!
 
 ### Code Quality Checks
 
 ```bash
 # Run ESLint validation
 npm run lint
+
+# Auto-fix simple issues
+npm run lint -- --fix
 ```
 
-This checks for:
+ESLint checks for:
 - Syntax errors
 - Code style violations
 - Unused imports
 - Best practice violations
 
-### Available Development Scripts
+### Available npm Scripts
 
 ```bash
-# Start development server with HMR
-npm run dev
-
-# Build production-ready optimized bundle
-npm run build
-
-# Preview the production build locally
-npm run preview
-
-# Run ESLint code quality checks
-npm run lint
+npm run dev       # Start dev server with HMR
+npm run build     # Create production bundle
+npm run preview   # Test production build locally  
+npm run lint      # Run code quality checks
 ```
 
 ---
 
-## 🏗️ Building for Production
-
-### Build Process
+## 🚀 Building & Deployment
 
 ```bash
 npm run build
@@ -380,11 +445,9 @@ Opens at `http://localhost:4173` so you can verify the production build works co
 
 ---
 
-## ☁️ Infrastructure with Terraform
+## 🏗️ Infrastructure as Code
 
-### Overview
-
-Terraform manages all AWS infrastructure needed for hosting this application. Every resource is defined as code, making infrastructure reproducible and version-controlled.
+Terraform manages all AWS infrastructure for this application. Every resource is version-controlled and reproducible.
 
 ### Terraform Files
 
@@ -499,18 +562,9 @@ terraform destroy
 
 ---
 
-## 🔄 CI/CD Pipeline - GitHub Actions
+## 🔄 CI/CD Pipeline
 
-### Overview
-
-GitHub Actions automatically:
-1. Builds the React application
-2. Validates code quality
-3. Uploads to S3 bucket
-4. Invalidates CloudFront cache
-5. Makes new version live instantly
-
-### Workflow File Location
+GitHub Actions automatically builds, validates, and deploys your application on every commit.
 
 `.github/workflows/deploy.yml`
 
@@ -753,31 +807,42 @@ Application running live on AWS S3 with CloudFront CDN.
 
 ---
 
-## 🔐 Security Best Practices
+## ✅ Best Practices
 
-### 1. AWS Credentials
-- ✅ Use IAM users (not root account)
-- ✅ Rotate access keys regularly
-- ✅ Never commit credentials to Git
-- ✅ Use GitHub Secrets for CI/CD
+### Frontend Development
+| Practice | Description |
+|----------|-------------|
+| **Component Reusability** | Create reusable components for DRY code |
+| **State Management** | Use React hooks properly (useState, useEffect) |
+| **Code Splitting** | Lazy load components for better performance |
+| **Error Handling** | Implement try-catch and error boundaries |
+| **Performance** | Avoid unnecessary re-renders and optimize images |
 
-### 2. Code Security
-- ✅ Run ESLint checks
-- ✅ Use npm audit to check vulnerabilities
-- ✅ Keep dependencies updated
-- ✅ Review code before merging
+### Deployment Best Practices
+| Practice | Description |
+|----------|-------------|
+| **Pre-deployment Testing** | Always test builds locally first |
+| **Terraform Planning** | Run `terraform plan` before `terraform apply` |
+| **Backup State** | Keep regular backups of terraform.tfstate |
+| **Gradual Rollout** | Deploy to staging before production |
+| **Monitoring** | Track CloudFront metrics and S3 access logs |
 
-### 3. Infrastructure Security
-- ✅ S3 bucket versioning enabled
-- ✅ Restrict public access to sensitive files
-- ✅ Use CloudFront for HTTPS only
-- ✅ Enable logging and monitoring
+### Security Best Practices
+| Practice | Description |
+|----------|-------------|
+| **Credential Management** | Never commit secrets to Git |
+| **GitHub Secrets** | Always use repository secrets for credentials |
+| **IAM Policies** | Use least privilege IAM policies |
+| **Code Review** | Require peer review for all merges |
+| **Dependency Updates** | Regularly update packages with `npm audit` |
 
-### 4. Deployment Safety
-- ✅ Test builds locally first
-- ✅ Plan before applying Terraform
-- ✅ Use gradual rollout strategies
-- ✅ Keep terraform.tfstate backups
+### Code Quality
+```bash
+# Before committing code:
+npm run lint          # Check for style violations
+npm run build         # Ensure production build works
+npm run preview       # Test production bundle locally
+```
 
 ---
 
@@ -946,43 +1011,53 @@ When reporting issues, include:
 
 ---
 
-We welcome contributions! Please follow these steps:
+## 🤝 Contributing
 
-### Create a Feature Branch
+We welcome contributions! Here's how to get involved:
+
+### 1. Fork & Clone
 ```bash
-git checkout -b feature/your-feature-name
+git clone https://github.com/yourusername/ERP-Frontend-S3.git
+cd "ERP Front-End for S3"
 ```
 
-### Make Your Changes
-1. Write clean, well-commented code
-2. Follow existing code style
-3. Run ESLint checks: `npm run lint`
+### 2. Create Feature Branch
+```bash
+git checkout -b feature/improve-dashboard
+```
 
-### Commit & Push
+### 3. Make Changes & Test
+```bash
+npm run lint        # Check code quality
+npm run build       # Test production build
+npm run dev         # Test during development
+```
+
+### 4. Commit & Push
 ```bash
 git add .
-git commit -m "Add your feature description"
-git push origin feature/your-feature-name
+git commit -m "Add feature: improve dashboard"
+git push origin feature/improve-dashboard
 ```
 
-### Create Pull Request
-1. Go to GitHub repository
-2. Click "Compare & pull request"
-3. Add detailed description of changes
-4. Wait for review and approval
+### 5. Create Pull Request
+- Go to GitHub repository
+- Click "Create Pull Request"
+- Add detailed description of changes
+- Wait for review
 
-### Code Review Checklist
-- ✅ Code follows style guidelines
-- ✅ Comments added for complex logic
-- ✅ No console errors or warnings
-- ✅ Tested locally before pushing
-- ✅ ESLint passes all checks
-- ✅ Build succeeds without errors
+### Contribution Guidelines
+✅ Follow existing code style  
+✅ Add comments for complex logic  
+✅ Test changes before pushing  
+✅ Keep commits focused and organized  
+✅ Write clear commit messages  
 
 ---
 
-##  License
+## 📄 License & Support
 
+### License
 This project is **Open Source** and available for learning, modification, and distribution.
 
 **You are free to:**
@@ -992,34 +1067,43 @@ This project is **Open Source** and available for learning, modification, and di
 - ✅ Contribute improvements
 - ✅ Share with others
 
-**Attribution:**
-Please give credit to the original creator: **Malinda Prabath** (malindaprabath876@gmail.com)
+**Attribution:**  
+Please give credit to the original creator: **Malinda Prabath**
+
+### Getting Help
+- 📖 [ERP-S3 App Documentation](ERP-S3/README.md)
+- 🔍 Search [GitHub Issues](https://github.com/yourusername/ERP-Frontend-S3/issues)
+- 💬 Open a new issue with details
+- 📧 Contact: malindaprabath876@gmail.com
 
 ---
 
 ## 🎯 Quick Reference
 
-### Most Common Commands
+### Essential Commands
 
 ```bash
-# Development
-npm run dev              # Start dev server
-npm run lint             # Check code quality
+# 👨‍💻 Development
+npm run dev              # Start dev server at localhost:5173
+npm run lint             # Check code quality with ESLint
+npm run build            # Create production bundle
+npm run preview          # Test production build locally
 
-# Production
-npm run build            # Create optimized build
-npm run preview          # Test production build
-
-# Infrastructure
+# 🏗️ Infrastructure (Terraform)
 cd Terraform
 terraform init           # Initialize Terraform
-terraform plan           # Preview changes
-terraform apply          # Create AWS resources
-terraform destroy        # Delete AWS resources
+terraform plan           # Preview AWS resources
+terraform apply          # Create AWS infrastructure
+terraform destroy        # Remove AWS resources
 
-# Deployment
+# 🚀 Deployment
 git push origin main     # Trigger GitHub Actions deploy
 ```
+
+### Project URLs
+- 📝 **Repository**: https://github.com/yourusername/ERP-Frontend-S3
+- 🌐 **Live Application**: https://your-bucket.cloudfront.net
+- 📚 **Documentation**: [README.md](README.md)
 
 ---
 
@@ -1027,7 +1111,7 @@ git push origin main     # Trigger GitHub Actions deploy
 
 ### 🚀 Ready to Deploy?
 
-**Complete Your Setup:**
+**Quick Setup Checklist:**
 1. ✅ Clone repository
 2. ✅ Run `npm install`
 3. ✅ Run `npm run dev`
